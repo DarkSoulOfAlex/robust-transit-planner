@@ -462,6 +462,11 @@ significherebbe convivere con una copia che puo' invecchiare rispetto al Markdow
 senza che nulla lo segnali. Chi consegna lo produce al momento e lo allega
 all'archivio, non lo cerca dentro `docs/`.
 
+**Nemmeno il template del docente e' nel repository**: e' materiale del corso,
+non degli autori, e non viene ridistribuito. Per rigenerare il `.docx` va
+procurato dal materiale del corso e salvato come `docs/template_docente.docx`,
+che e' il percorso da cui lo legge `scripts/prepara_riferimento.py`.
+
 La conversione richiede [pandoc](https://pandoc.org/) e due comandi:
 
 ```bash
