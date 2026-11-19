@@ -202,7 +202,7 @@ del 25 e 26 agosto, gli archivi statici GTFS, i manifest, `index.json` e
 `gaps.jsonl`. Copiarli mantiene coerente la storia della raccolta.
 
 ```bash
-cd /c/Users/MSI/Desktop/ICON
+cd /c/percorso/del/progetto
 tar czf - data/raw | ssh vm-icon 'tar xzf - -C ~/icon'
 ```
 

@@ -18,7 +18,7 @@ Serve Python 3.11 o superiore (verificato su 3.14.6).
 ### Windows (PowerShell)
 
 ```powershell
-cd C:\Users\MSI\Desktop\ICON
+cd C:\percorso\del\progetto
 py -3 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
@@ -168,14 +168,14 @@ un arresto anomalo.
 ### 3.1 Windows — Utilita' di pianificazione
 
 Il file [docs/collector_windows.xml](docs/collector_windows.xml) contiene un
-compito gia' pronto e verificato su questa macchina. Prima di importarlo va
-controllato in due punti:
+compito gia' pronto e verificato sulla macchina di sviluppo. Prima di importarlo
+vanno sostituiti i segnaposto in due punti:
 
-1. i due elementi `<UserId>`, che devono contenere l'utente restituito da
-   `whoami` (qui: `rottame\alex`). Se non corrispondono, `schtasks` risponde
+1. i due elementi `<UserId>` (segnaposto `NOME-PC\utente`), che devono contenere
+   l'utente restituito da `whoami`. Se non corrispondono, `schtasks` risponde
    **"Accesso negato"**;
-2. `<Command>` e `<WorkingDirectory>`, se il progetto non si trova in
-   `C:\Users\MSI\Desktop\ICON`.
+2. `<Command>` e `<WorkingDirectory>` (segnaposto `C:\percorso\del\progetto`),
+   che devono puntare alla cartella del progetto.
 
 ```powershell
 # Dalla cartella del progetto, in un PowerShell NORMALE (non serve amministratore)
