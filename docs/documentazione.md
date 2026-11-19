@@ -8,7 +8,7 @@ Gruppo di lavoro
 - Alex Lorenzo Girone
 - Michele Boccasile
 
-https://github.com/DarkSoulOfAlex/ICON
+https://github.com/DarkSoulOfAlex/robust-transit-planner
 
 AA 2025-2026
 
