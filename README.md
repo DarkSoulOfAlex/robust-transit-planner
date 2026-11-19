@@ -538,3 +538,12 @@ fonti.
   pubblicati su <https://romamobilita.it/sistemi-e-tecnologie/open-data/>. La
   pagina non riporta una licenza esplicita: chi vuole riusare i dati ne verifichi
   le condizioni presso la fonte.
+
+---
+
+## 9. Licenza
+
+Il codice e' distribuito con licenza MIT: il testo e' in [LICENSE](LICENSE). La
+licenza copre cio' che hanno scritto gli autori, non i dati delle aziende di
+trasporto ne' le statistiche che ne derivano in `results/`, per i quali valgono le
+condizioni della sezione 8.
