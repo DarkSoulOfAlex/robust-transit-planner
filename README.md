@@ -9,6 +9,25 @@ distribuzione reale dei ritardi appresa da dati raccolti sul campo.
 Le scelte tecniche e il perche' sono discusse in
 [docs/documentazione.md](docs/documentazione.md), una sottosezione per argomento.
 
+**Autori:** Alex Lorenzo Girone, Michele Boccasile. Anno accademico 2025-2026.
+
+> **In English.** A public-transport journey planner that, instead of minimising the
+> scheduled arrival time, maximises the *probability of arriving by a given
+> deadline*, using delay distributions learned from GTFS-Realtime data collected
+> continuously in Rome and Turin. It combines five modules, each built on a
+> different formalism: an Answer Set Programming knowledge base (clingo) that infers
+> the transfer relation between stops, a multi-criteria search on a time-expanded
+> graph, the probabilistic composition of delays along the chain of connections,
+> delay distributions learned from the field data, and a constraint-satisfaction
+> formulation of multi-stop trips. A backtest on the collected data answers the
+> research question: with 30 minutes of slack the robust planner misses about half
+> as many connections as the earliest-arrival baseline in Rome, and about a third
+> as many in Turin, at the price of a few minutes of scheduled travel time (median
+> 4-7 minutes in Rome and 3-5 in Turin, where the gain is largest). University
+> project for the Knowledge Engineering course (Ingegneria della Conoscenza),
+> University of Bari. Code, comments and the full report
+> ([docs/documentazione.md](docs/documentazione.md)) are in Italian.
+
 ---
 
 ## 1. Installazione
@@ -500,3 +519,22 @@ definiti = set(re.findall(r'w:styleId="([^"]+)"', sty))
 print("stili non definiti:", sorted(usati - definiti) or "nessuno")
 EOF
 ```
+
+---
+
+## 8. Fonti dei dati e attribuzioni
+
+I dati grezzi non sono nel repository (sezione 5): chi clona il progetto li
+raccoglie da se' dai feed configurati in `config.yaml`. I file in `results/` sono
+invece statistiche derivate da quei dati, e restano soggetti alle condizioni delle
+fonti.
+
+- **Torino.** Data source: GTT S.p.A. – Gruppo Torinese Trasporti,
+  <https://www.gtt.to.it>. La
+  [licenza dei dati GTFS di GTT](https://www.gtt.to.it/gtt_gtfs_license.html) ne
+  consente l'uso solo per fini non commerciali e richiede questa attribuzione in
+  ogni uso o ridistribuzione.
+- **Roma.** Roma Servizi per la Mobilita', dati aperti GTFS e GTFS-Realtime
+  pubblicati su <https://romamobilita.it/sistemi-e-tecnologie/open-data/>. La
+  pagina non riporta una licenza esplicita: chi vuole riusare i dati ne verifichi
+  le condizioni presso la fonte.
